@@ -67,5 +67,5 @@ In order to listen clicks on items:
         Log.i("sat", "Clicked on " + id);
       }
     });
-
+test
 The click event gives the ID of the item which was defined when adding it. 
