@@ -78,9 +78,9 @@ public class SatelliteMenuActivity extends Activity {
         startActivity(intent);
     }
 
-    public void pingjia(){
-
-
+    public void pingjia() {
+        Intent intent = new Intent(SatelliteMenuActivity.this, commentActivity.class);
+        startActivity(intent);
     }
 
 }
