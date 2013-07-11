@@ -79,12 +79,6 @@ public class GridAdapter extends BaseAdapter{
                 satelliteMenuActivity.pingjia();
             }
         });
-        pingjia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                satelliteMenuActivity.pingjia();
-            }
-        });
         Drawable cachedImage = asyncImageLoader.loadDrawable(mes.getImgurl(),imageView, new AsyncImageLoader1.ImageCallback(){
                     public void imageLoaded(Drawable imageDrawable,ImageView imageView, String imageUrl) {
                         imageView.setImageDrawable(imageDrawable);
