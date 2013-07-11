@@ -85,7 +85,7 @@ public class commentActivity extends Activity {
             DataOutputStream dataout = null;
             DataInputStream datain = null;
             try {
-                socket=new Socket("192.168.1.1",8083);
+                socket=new Socket("192.168.1.105",8083);
                 dataout = new DataOutputStream(socket.getOutputStream());
                 datain = new DataInputStream(socket.getInputStream());
                 dataout.writeUTF("<#SUMMIT#>"+say+"|"+tuanname);
