@@ -5,13 +5,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Administrator
- * Date: 13-7-10
- * Time: 下午9:01
- * To change this template use File | Settings | File Templates.
- */
+
 public class commentActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
