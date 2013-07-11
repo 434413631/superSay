@@ -76,7 +76,7 @@ public class GridAdapter extends BaseAdapter{
         pingjia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                satelliteMenuActivity.pingjia();
+                satelliteMenuActivity.pingjia(mes.getTitle());
             }
         });
         Drawable cachedImage = asyncImageLoader.loadDrawable(mes.getImgurl(),imageView, new AsyncImageLoader1.ImageCallback(){
