@@ -58,27 +58,59 @@
         <EditText
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/littleEdit"
-                android:layout_centerInParent="true"></EditText>
+                android:inputType="text"
+                android:id="@+id/littleEdit2"
+                android:layout_centerInParent="true"/>
 
     </RelativeLayout>
     <RelativeLayout
             android:layout_marginTop="20px"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/relative">
+
+        <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="图片"
-                android:id="@+id/textView" android:layout_gravity="center" android:layout_alignParentLeft="true"
-                android:layout_marginLeft="24dp" android:layout_centerVertical="true"/>
-        <ImageView
-                android:src="@drawable/test"
-                android:layout_width="wrap_content"
-                android:layout_height="97dp"
                 android:id="@+id/imagefor"
                 />
+        <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_below="@id/relative"
+                android:orientation="horizontal"
+                android:id="@+id/linerlayout"
+                >
+            <Button
+                    android:layout_below="@id/imagefor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选取图片"
+                    android:id="@+id/selectImg"
+                    android:layout_marginLeft="24dp"/>
+            <Button
+                    android:id="@+id/uploadImag"
+                    android:layout_below="@id/imagefor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传所选图片"
+                    android:layout_marginLeft="24dp"/>
+        </LinearLayout>
+        <ProgressBar
+                android:layout_below="@id/linerlayout"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/uploadImageResult"
+                ></TextView>
+
     </RelativeLayout>
     <RelativeLayout
             android:layout_marginTop="20px"
@@ -93,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="顶此团购"
-                    android:id="@+id/buttonding" android:layout_gravity="center"/>
+                    android:id="@+id/buttonding" android:layout_gravity="center" android:enabled="false"/>
             <Button
                     android:layout_toRightOf="@id/buttonding"
                     android:src="@drawable/test"
