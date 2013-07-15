@@ -115,10 +115,12 @@ public class commentActivity extends Activity implements View.OnClickListener,Up
         uploadImageResult=(TextView)findViewById(R.id.uploadImageResult);
         uploadPic=(Button)findViewById(R.id.uploadImag);
         selectImg = (Button) findViewById(R.id.selectImg);
+        selectImg.setOnClickListener(this);
         img = (ImageView) findViewById(R.id.imagefor);
         ding = (Button) findViewById(R.id.buttonding);
         cai = (Button) findViewById(R.id.buttoncai);
         summit = (Button) findViewById(R.id.summit);
+        summit.setOnClickListener(this);
         littleSay = (EditText) findViewById(R.id.littleEdit2);//简评
         progressBar = (ProgressBar) findViewById(R.id.progressBar1);
     }
@@ -130,6 +132,7 @@ public class commentActivity extends Activity implements View.OnClickListener,Up
                 title=getIntent().getStringExtra("title");
                 String littleSayText = littleSay.getText().toString();
                 SummitData(littleSayText, title);
+                break;
             case R.id.selectImg:
                 Intent intent = new Intent(this, SelectPicActivity.class);
                 startActivityForResult(intent, TO_SELECT_PHOTO);
